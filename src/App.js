@@ -53,6 +53,7 @@ function App() {
                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`}
                 alt=""
               />
+              <p className="idPokemon">#{pokemon.id}</p>
             </div>
             <div className="red-dot-3"></div>
             <div className="speakerbars">
@@ -84,32 +85,43 @@ function App() {
         <div className="flap-container">
           <div className="large-screen">
             <p>
-              Name: <span>{pokemon.name}</span>
-            </p>
-            <p>
-              Height:{" "}
+              {`Name: `}
               <span>
-                {pokemon.weight && pokemon.weight * 10 + " cm"}
+                {pokemon.name &&
+                  pokemon.name.slice(0, 1).toUpperCase() +
+                    pokemon.name.slice(1)}
               </span>
             </p>
             <p>
-              Weight:{" "}
-              <span>
-                {pokemon.weight && pokemon.weight / 10 + " kg"}
-              </span>
+              {`Height: `}
+              <span>{pokemon.height && pokemon.height * 10 + " cm"}</span>
+            </p>
+            <p>
+            {`Weight: `}
+              <span>{pokemon.weight && pokemon.weight / 10 + " kg"}</span>
             </p>
           </div>
           <div className="blue-buttons">
-            <div className="blue-button"></div>
-            <div className="blue-button"></div>
-            <div className="blue-button"></div>
-            <div className="blue-button"></div>
-            <div className="blue-button"></div>
-            <div className="blue-button"></div>
-            <div className="blue-button"></div>
-            <div className="blue-button"></div>
-            <div className="blue-button"></div>
-            <div className="blue-button"></div>
+            <div className="blue-button">HP</div>
+            <div className="blue-button">Attack</div>
+            <div className="blue-button">Defense</div>
+            <div className="blue-button">Speed</div>
+            <div className="blue-button">Moves</div>
+            <div className="blue-button">
+              {pokemon.stats && pokemon.stats[0].base_stat}
+            </div>
+            <div className="blue-button">
+              {pokemon.stats && pokemon.stats[1].base_stat}
+            </div>
+            <div className="blue-button">
+              {pokemon.stats && pokemon.stats[2].base_stat}
+            </div>
+            <div className="blue-button">
+              {pokemon.stats && pokemon.stats[5].base_stat}
+            </div>
+            <div className="blue-button">
+              {pokemon.moves && pokemon.moves.length}
+            </div>
           </div>
           <div className="black-pill-buttons">
             <div className="black-pill-button"></div>
