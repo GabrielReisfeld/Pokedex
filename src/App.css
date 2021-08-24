@@ -325,7 +325,7 @@
   }
   .idPokemon {
       text-align: center;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
   }
   
   .red-dot-3 {
@@ -493,7 +493,7 @@
     top: 6%;
     border-radius: 5px;
     background: var(--screen-dark);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
   .large-screen > p {

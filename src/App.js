@@ -98,7 +98,7 @@ function App() {
             </p>
             <p>
             {`Weight: `}
-              <span>{pokemon.weight && pokemon.weight / 10 + " kg"}</span>
+              <span>{pokemon.weight && Math.round(pokemon.weight / 10) + " kg"}</span>
             </p>
           </div>
           <div className="blue-buttons">
