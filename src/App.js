@@ -89,7 +89,7 @@ function App() {
               <span>
                 {pokemon.name &&
                   pokemon.name.slice(0, 1).toUpperCase() +
-                    pokemon.name.slice(1)}
+                  pokemon.name.slice(1)}
               </span>
             </p>
             <p>
@@ -97,7 +97,7 @@ function App() {
               <span>{pokemon.height && pokemon.height * 10 + " cm"}</span>
             </p>
             <p>
-            {`Weight: `}
+              {`Weight: `}
               <span>{pokemon.weight && Math.round(pokemon.weight / 10) + " kg"}</span>
             </p>
           </div>
@@ -135,13 +135,14 @@ function App() {
           <div className="small-screens">
             <div className="small-screen-flap">
               <p id="type-1">{pokemon.types && pokemon.types[0].type.name.slice(0, 1).toUpperCase() +
-                    pokemon.types[0].type.name.slice(1)}</p>
+                pokemon.types[0].type.name.slice(1)}</p>
             </div>
             <div className="small-screen-flap">
               <p id="type-2">
                 {pokemon.types &&
                   pokemon.types[1] &&
-                  pokemon.types[1].type.name}
+                  pokemon.types[1].type.name.slice(0, 1).toUpperCase() +
+                  pokemon.types[1].type.name.slice(1)}
               </p>
             </div>
           </div>
