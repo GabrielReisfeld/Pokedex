@@ -134,7 +134,8 @@ function App() {
           <div className="yellow-light"></div>
           <div className="small-screens">
             <div className="small-screen-flap">
-              <p id="type-1">{pokemon.types && pokemon.types[0].type.name}</p>
+              <p id="type-1">{pokemon.types && pokemon.types[0].type.name.slice(0, 1).toUpperCase() +
+                    pokemon.types[0].type.name.slice(1)}</p>
             </div>
             <div className="small-screen-flap">
               <p id="type-2">
