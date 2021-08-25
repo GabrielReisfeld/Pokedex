@@ -1,5 +1,5 @@
 :root {
-    --size: 80;
+    --size: 110;
     --unit: calc((var(--size) / 480) * 1vmin);
   
     --red: #dc0a2d;
@@ -497,6 +497,9 @@
     border-radius: 5px;
     background: var(--screen-dark);
     font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   
   .large-screen > p {
