@@ -603,6 +603,7 @@
   .small-screen-flap {
     display: flex;
     justify-content: center;
+    align-items: center;
     background: var(--screen-dark);
     border-radius: 4px;
     height: 100%;
