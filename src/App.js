@@ -89,7 +89,7 @@ function App() {
               <span>
                 {pokemon.name &&
                   pokemon.name.slice(0, 1).toUpperCase() +
-                    pokemon.name.slice(1)}
+                  pokemon.name.slice(1)}
               </span>
             </p>
             <p>
